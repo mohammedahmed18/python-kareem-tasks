@@ -11,29 +11,25 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-   
   </head>
   <body>
-    <div class="container mt-5 vh-100 d-flex justify-content-center flex-column align-items-center w-100">
-      <form action="/add" method="post" class="w-100 align-content-start">
-        {% csrf_token %}
-        <div clas="row d-flex">
-        <div class="form-group ">
-        <label for="">First Number</label>
-        <input type="text" class="form-control" name="num1" />
-        </div>
-
-        <div class="form-group">
-        <label for="">Second Number</label>
-        <input type="text" class="form-control" name="num2" />
-        </div>
+    <div class="vh-100">
+      <div class="p-4 text-center text-white" style="background-color: #6b0f0f">
+        <h1>welcome</h1>
       </div>
-        <button type="submit" class="btn btn-primary my-2">Calc</button>
-      </form>
+      <div class="p-5">
+        <form action="" method="post">
+          {% csrf_token %} {{ form }}
+          <button type="submit" class="btn btn-primary my-2">Submit</button>
+        </form>
 
-      {% if result %}
-     <h1> {{ result }} </h1>
-      {% endif %}
+        {% if result %}
+        <h1>result : {{ result }}</h1>
+        {% endif %}
+      </div>
+      <div class="p-4 text-center text-white" style="background-color: #6b0f0f">
+        <h1>Goodbye</h1>
+      </div>
     </div>
   </body>
   <script
