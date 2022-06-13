@@ -11,6 +11,5 @@ def addxy(request):
         return render(request , 'index.html' ,{
             'result' : str(z)
         })
-
     else:
         return render(request , 'index.html')

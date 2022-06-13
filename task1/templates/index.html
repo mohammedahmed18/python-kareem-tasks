@@ -18,20 +18,25 @@
     </style>
   </head>
   <body>
-    <div class="container mt-5">
-      <form action="" method="post">
-          {% csrf_token %}
-        <label for=""> Number 1</label>
+    <div class="container mt-5 vh-100 d-flex justify-content-center flex-column align-items-center w-100">
+      <form action="/add" method="post" class="w-100 align-content-start">
+        {% csrf_token %}
+        <div clas="row d-flex">
+        <div class="form-group ">
+        <label for="">First Number</label>
         <input type="text" class="form-control" name="num1" />
+        </div>
 
-        <label for=""> Number 2</label>
+        <div class="form-group">
+        <label for="">Second Number</label>
         <input type="text" class="form-control" name="num2" />
-
-        <button type="submit" class="btn btn-primary my-2">ADD</button>
+        </div>
+      </div>
+        <button type="submit" class="btn btn-primary my-2">Calc</button>
       </form>
 
       {% if result %}
-      <h1>result :   {{ result }} </h1>
+     <h1> {{ result }} </h1>
       {% endif %}
     </div>
   </body>
